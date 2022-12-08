@@ -273,8 +273,8 @@ class ConvAE:
 
         xent1_loss = 1 * K.mean((x_recon - x_recon1) ** 2, 0)
         #self.adv_loss = lamb * K.sum(xent1_loss) + 0.04 * K.sum(Dis) + 1 * K.sum(selfloss)
-        #self.adv_loss = 0.01 * lamb * K.sum(xent1_loss) + 0.04 * K.sum(Dis) + 0.1 * K.sum(selfloss)    # reduce gamma
-        #self.adv_loss = lamb * K.sum(xent1_loss) + 0.04 * K.sum(Dis) + 1 * K.sum(selfloss)    # reduce gamma
+        #self.adv_loss = 0.01 * lamb * K.sum(xent1_loss) + 0.04 * K.sum(Dis) + 0.1 * K.sum(selfloss)    
+        #self.adv_loss = lamb * K.sum(xent1_loss) + 0.04 * K.sum(Dis) + 1 * K.sum(selfloss)    
         self.adv_loss = lamb * K.sum(xent1_loss) + 0.01 * K.sum(Dis) + 1 * K.sum(selfloss)
 
 #defense
