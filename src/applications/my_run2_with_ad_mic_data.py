@@ -70,7 +70,7 @@ config = tf.ConfigProto()
 config.gpu_options.allow_growth=True
 session =tf.Session(config=config)
 
-run_net_initial(data, params)
+#run_net_initial(data, params)
 
 
 for i in range(10):
