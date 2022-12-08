@@ -1,5 +1,3 @@
-# use simulation_data1 and simulation_data2 to train the networks
-
 
 import sys, os
 import numpy as np
@@ -24,19 +22,19 @@ args = parser.parse_args()
 # SELECT GPU
 
 
-if not os.path.exists( os.path.join('/yaop/raofan/ALRDC/src/applications/ad_mic_data/top3000/', 'cluster6_save_data1'    ) ):
-    os.makedirs( os.path.join('/yaop/raofan/ALRDC/src/applications/ad_mic_data/top3000/', 'cluster6_save_data1'   ) )
+if not os.path.exists( os.path.join('./applications/ad_mic_data/top3000/', 'cluster6_save_data1'    ) ):
+    os.makedirs( os.path.join('./applications/ad_mic_data/top3000/', 'cluster6_save_data1'   ) )
 
 
-pkl_file=os.path.join('/yaop/raofan/ALRDC/src/core/','AD_mic_data.pkl' )
-save_dir=os.path.join('/yaop/raofan/ALRDC/src/applications/ad_mic_data/top3000/', 'cluster6_save_data1')
+pkl_file=os.path.join('./core/','AD_mic_data.pkl' )
+save_dir=os.path.join('./applications/ad_mic_data/top3000/', 'cluster6_save_data1')
 
 
 params = defaultdict(lambda: None)
 
 # SET GENERAL HYPERPARAMETERS
 general_params = {
-        'dset': args.dset,                  # dataset: reuters / mnist
+        'dset': args.dset,                 
         }
 params.update(general_params)
 
